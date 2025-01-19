@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --rcy-red: #fe006e;
+    --rcy-blue: #00aaff7a;
+    --rcy-dark-blue: #00679b;
+    --rcy-light-blue: #00aaff;
+    --card-border: #acacac6f;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 30px;
+}
+
+body {
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+body[data-theme="light"] .card {
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+}
+
+body[data-theme="dark"] .card {
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+}
+
+body[data-theme="dark"] .title, body[data-theme="light"] .title {
+    background-image: linear-gradient(to right, var(--rcy-red), var(--rcy-blue));
+    background-clip: text;
+    color: transparent;
+}
+
+/* Glowing Logos */
+body[data-theme="dark"] .blue-logo {
+    filter: drop-shadow(0px 0px 25px var(--rcy-blue));
+}
+
+body[data-theme="dark"] .red-logo {
+    filter: drop-shadow(0px 0px 25px var(--rcy-red));
+}
+
+.hero-button {
+    transition: filter 0.3s ease-in-out;
+}
+.hero-button:hover {
+    filter: drop-shadow(0px 0px 10px var(--rcy-blue));
+}
+
+body[data-theme="light"] .navbar {
+    filter: drop-shadow(0px 0px 10px var(--card-border));
+}
+
+.component {
+    border-top: 1px solid var(--card-border);
+    padding: 4rem 0;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #dbdbdb1b;
+}
