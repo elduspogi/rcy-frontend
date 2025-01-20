@@ -45,17 +45,16 @@ const Navbar = () => {
           <li onClick={handleGoToTop}><a>Home</a></li>
           <li><a href='#about'>Events</a></li>
           <li><a>News</a></li>
-          <li><a href='#join-us'>Join Us</a></li>
-          {/* <li>
+          <li>
             <details>
               <summary>Join Us</summary>
               <ul className="p-2">
-                <li><a>Volunteer</a></li>
-                <li><a>Member</a></li>
-                <li><a>Donor</a></li>
+                <li><a href='#join-us'>Volunteer</a></li>
+                <li><a href='#join-us'>Member</a></li>
+                <li><a href='#partner'>Partner</a></li>
               </ul>
             </details>
-          </li> */}
+          </li>
         </ul>
       </div>
       <div className="navbar-end hidden lg:flex">

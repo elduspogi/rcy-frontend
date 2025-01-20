@@ -21,21 +21,21 @@ const Volunteer = () => {
       icon: <FaHandsHelping className="text-8xl bg-[#00aaff7a] dark:bg-[#00679b] text-[#00679b] dark:text-[#1d232a] p-4 rounded-md" />,
       link: "/"
     },
-    {
-      id: 3,
-      title: "Partner",
-      desc: "lorem lorem lorem",
-      icon: <RiShakeHandsFill className="text-8xl bg-[#00aaff7a] dark:bg-[#00679b] text-[#00679b] dark:text-[#1d232a] p-4 rounded-md" />,
-      link: "/"
-    },
+    // {
+    //   id: 3,
+    //   title: "Partner",
+    //   desc: "lorem lorem lorem",
+    //   icon: <RiShakeHandsFill className="text-8xl bg-[#00aaff7a] dark:bg-[#00679b] text-[#00679b] dark:text-[#1d232a] p-4 rounded-md" />,
+    //   link: "/"
+    // },
   ]
 
   return (
     <div id='join-us'>
-      <div className='mx-2 lg:mx-40 component'>
+      <div className='mx-2 lg:mx-40 py-16'>
         <SmallHeader title="JOIN US" desc="Be a volunteer at " rcy="Red Cross Youth" />
 
-        <div className="flex flex-col md:flex-row gap-4 lg:gap-12">
+        <div className="flex flex-col md:flex-row gap-4 lg:gap-12 md:px-16 lg:px-24">
           {cards.map((card) => (
             <div className="card bg-base-100 w-full rounded-md volunteer-card hover:md:scale-105 hover:md:rotate-3" key={card.id}>
               <figure className="px-10 pt-10">

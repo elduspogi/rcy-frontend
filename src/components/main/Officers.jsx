@@ -5,7 +5,7 @@ import Button from './Button'
 
 const Officers = () => {
   return (
-    <div className="mx-2 lg:mx-40 component flex flex-col items-center">
+    <div className="py-10 flex flex-col items-center bg-sky-50 dark:bg-gray-800">
       <SmallHeader title="OFFICERS" desc="Meet the officers of " rcy="Red Cross Youth" />
 
       <Button text="Meet the officers" icon={<FaArrowRightLong />} link="/officers" />

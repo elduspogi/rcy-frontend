@@ -41,8 +41,8 @@ const About = () => {
       <div className='mx-2 lg:mx-40 component'>
         <SmallHeader title="ABOUT" desc="Learn more about" rcy="Red Cross Youth" />
 
-        <div className='flex flex-col md:flex-row-reverse gap-8'>
-          <div className='md:w-1/2 lg:w-1/2'>
+        <div className='flex flex-col md:flex-row-reverse gap-8 lg:px-24'>
+          <div className='md:w-1/2'>
             <img 
               src={aboutImg} 
               alt="Red Cross About Image" 
@@ -50,7 +50,7 @@ const About = () => {
             />
           </div>
 
-          <div className='w-full md:w-1/2 lg:w-1/2 bg-transparent space-y-5'>
+          <div className='w-full md:w-1/2 bg-transparent space-y-5'>
               <div className="flex flex-wrap border-b border-[#acacac6f]">
                 {tabs.map((tab) => (
                   <button 

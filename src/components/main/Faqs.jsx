@@ -47,8 +47,9 @@ const Faqs = () => {
           {leftFaq.map((item, index) => (
             <div className="collapse collapse-arrow join-item border-b-[1px]" key={index} onClick={() => handleToggle(index)}>
               <input type="radio" name="my-accordion-4" checked={open===index}  onChange={() => handleToggle(index)} />
-              <div className="collapse-title text-md font-medium text-[#00679b] dark:text-[#00aaff]"
-              >{item.title}</div>
+              <div className="collapse-title text-md font-medium"
+              >
+                {item.title}</div>
               <div className="collapse-content">
                 <p>{item.text}</p>
               </div>
@@ -60,7 +61,7 @@ const Faqs = () => {
           {rightFaq.map((item, index) => (
             <div className="collapse collapse-arrow join-item border-b-[1px]" key={index + 3} onClick={() => handleToggle(index + 3)}>
               <input type="radio" name="my-accordion-4" checked={open===index + 3} onChange={() => handleToggle(index + 3)} />
-              <div className="collapse-title text-md font-medium text-[#00679b] dark:text-[#00aaff]"
+              <div className="collapse-title text-md font-medium"
               >{item.title}</div>
               <div className="collapse-content">
                 <p>{item.text}</p>

@@ -30,7 +30,7 @@ body[data-theme="dark"] .card {
 }
 
 body[data-theme="dark"] .title, body[data-theme="light"] .title {
-    background-image: linear-gradient(to right, var(--rcy-red), var(--rcy-blue));
+    background-image: linear-gradient(to right, var(--rcy-red), var(--rcy-light-blue));
     background-clip: text;
     color: transparent;
 }
@@ -53,6 +53,10 @@ body[data-theme="dark"] .red-logo {
 
 body[data-theme="light"] .navbar {
     filter: drop-shadow(0px 0px 10px var(--card-border));
+}
+
+body[data-theme="dark"] .navbar {
+    box-shadow:  0px 0px 10px 0px var(--dark);
 }
 
 .component {
@@ -93,4 +97,70 @@ body {
 /* Border none */
 .remove-border {
     border: none !important;
+}
+
+/* Partner Slider */
+@keyframes slide {
+    from{
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.logos {
+    position: relative;
+}
+
+.logos:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255,255,255,0), white);
+    content: "";
+    z-index: 2;
+}
+
+.logos:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0), white);
+    content: "";
+    z-index: 2;
+}
+
+body[data-theme="dark"] .logos:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0), var(--dark));
+    content: "";
+    z-index: 2;
+}
+
+body[data-theme="dark"] .logos:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255,255,255,0), var(--dark));
+    content: "";
+    z-index: 2;
+}
+
+/* .logos:hover .logos-slide {
+    animation-play-state: paused;
+} */
+
+.logos-slide {
+    animation: 15s slide infinite linear;
 }

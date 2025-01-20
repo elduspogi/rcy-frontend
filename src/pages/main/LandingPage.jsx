@@ -7,6 +7,7 @@ import ArrowTop from '../../components/main/ArrowTop';
 import DonateBlood from '../../components/main/DonateBlood';
 import Footer from '../../components/main/Footer';
 import Faqs from '../../components/main/Faqs';
+import Partners from '../../components/main/Partners';
 
 const LandingPage = () => {
   return (
@@ -17,6 +18,7 @@ const LandingPage = () => {
       <Officers />
       <Volunteer />
       <DonateBlood />
+      <Partners />
       <Faqs />
       
       <Footer />

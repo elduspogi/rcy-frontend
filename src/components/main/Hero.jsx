@@ -2,9 +2,9 @@ import React from 'react'
 import RCYLogo from '../../assets/img/red-cross-youth.png'
 import SPCLogo from '../../assets/img/san-pedro.png'
 import Button from './Button'
-import { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const Hero = () => {
   // Init AOS
@@ -16,7 +16,7 @@ const Hero = () => {
   }, [])
 
   return (
-    <div className="hero md:min-h-screen min-w-screen p-8">
+    <div className="hero md:min-h-screen min-w-screen py-20 px-8 md:p-8">
       {/* HeroBackground */}
       <div className="hidden md:flex dark:opacity-5 absolute inset-0 z-1 h-full w-full black bg-[linear-gradient(to_right,#dbdbdb3c_1px,transparent_1px),linear-gradient(to_bottom,#dbdbdb3c_1px,transparent_1px)] bg-[size:6rem_4rem]"></div>
 
@@ -27,7 +27,7 @@ const Hero = () => {
       <div className="hero-content text-center z-20">
         <div className="md:max-w-xl lg:max-w-3xl">
           <h1 className="text-xl md:text-2xl font-bold" data-aos="fade-up" data-aos-delay="0">City of San Pedro</h1>
-          <h1 className="text-3xl lg:text-8xl md:text-6xl font-bold mb-6 title" data-aos="fade-up" data-aos-delay="300">Red Cross Youth</h1>
+          <h1 className="text-3xl md:text-6xl lg:text-8xl font-bold mb-6 title" data-aos="fade-up" data-aos-delay="300">Red Cross Youth</h1>
           
           <div className="flex flex-row gap-4 md:gap-8 justify-center mb-6" data-aos="fade-up" data-aos-delay="600">
             <Button text="Learn more" link="#about" />
