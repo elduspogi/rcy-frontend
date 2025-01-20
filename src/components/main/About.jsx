@@ -37,41 +37,39 @@ const About = () => {
   }
 
   return (
-    <>
-      <div id='about'>
-        <div className='mx-2 lg:mx-40 component'>
-          <SmallHeader title="ABOUT" desc="Learn more about" rcy="Red Cross Youth" />
+    <div id='about'>
+      <div className='mx-2 lg:mx-40 component'>
+        <SmallHeader title="ABOUT" desc="Learn more about" rcy="Red Cross Youth" />
 
-          <div className='flex flex-col md:flex-row-reverse gap-12'>
-            <div className='md:w-1/2 lg:w-1/2'>
-              <img 
-                src={aboutImg} 
-                alt="Red Cross About Image" 
-                className="w-[500px] rounded-lg object-contain md:rotate-3" 
-              />
-            </div>
-
-            <div className='w-full md:w-1/2 lg:w-1/2 bg-transparent space-y-5'>
-                <div className="flex flex-wrap border-b border-[#acacac6f]">
-                  {tabs.map((tab) => (
-                    <button 
-                      key={tab.id} 
-                      className={`px-4 py-2 font-semibold
-                      ${activeTab === tab.id ? "border-b-2 border-[#00aaff] text-[#00aaff]" : "text-[#00679b] hover:text-[#00aaff7a]"}`}
-                      onClick={() => setActiveTab(tab.id)}
-                    >
-                      {tab.label}
-                    </button>
-                  ))}
-                </div>
-
-                <div>{tabContent[activeTab]}</div>
-              </div>
+        <div className='flex flex-col md:flex-row-reverse gap-8'>
+          <div className='md:w-1/2 lg:w-1/2'>
+            <img 
+              src={aboutImg} 
+              alt="Red Cross About Image" 
+              className="w-[500px] rounded-lg object-contain md:rotate-3" 
+            />
           </div>
-        
+
+          <div className='w-full md:w-1/2 lg:w-1/2 bg-transparent space-y-5'>
+              <div className="flex flex-wrap border-b border-[#acacac6f]">
+                {tabs.map((tab) => (
+                  <button 
+                    key={tab.id} 
+                    className={`px-4 py-2 font-semibold
+                    ${activeTab === tab.id ? "border-b-2 border-[#00aaff] text-[#00aaff]" : "text-[#00679b] hover:text-[#00aaff7a]"}`}
+                    onClick={() => setActiveTab(tab.id)}
+                  >
+                    {tab.label}
+                  </button>
+                ))}
+              </div>
+
+              <div>{tabContent[activeTab]}</div>
+            </div>
         </div>
+      
       </div>
-    </>
+    </div>
   )
 }
 

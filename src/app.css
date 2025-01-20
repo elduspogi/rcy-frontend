@@ -6,11 +6,13 @@
     --rcy-dark-blue: #00679b;
     --rcy-light-blue: #00aaff;
     --card-border: #acacac6f;
+    --via: #5d00ff;
+    --dark: #1d232a;
 }
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 30px;
+    scroll-padding-top: 60px;
 }
 
 body {
@@ -55,10 +57,40 @@ body[data-theme="light"] .navbar {
 
 .component {
     border-top: 1px solid var(--card-border);
-    padding: 4rem 0;
+    padding: 3rem 0;
 }
 
 body {
     overflow-x: hidden;
     background-color: #dbdbdb1b;
+}
+
+.volunteer-card {
+    position: relative;
+    transform-style: preserve-3d;
+    border: none !important;
+}
+
+.volunteer-card::before {
+    content: "";
+    position: absolute; 
+    inset: 0px;
+    background: conic-gradient(from 90deg at 40% -25%, var(--rcy-blue), var(--rcy-red));
+    filter: blur(10px);
+    transform: translate3d(0px,0px,-1px);
+    border-radius: inherit;
+    pointer-events: none;
+}
+
+/* .card {
+    border: none !important;
+} */
+
+.footer-container {
+    border-top: 1px solid var(--card-border);
+}
+
+/* Border none */
+.remove-border {
+    border: none !important;
 }
