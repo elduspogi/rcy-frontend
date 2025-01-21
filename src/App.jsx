@@ -6,6 +6,7 @@ import Title from "./hooks/Title"
 import { useContext } from "react"
 import { ThemeContext } from "./hooks/Theme"
 import OfficersPage from "./pages/main/OfficersPage"
+import PrivacyPolicyPage from "./pages/main/PrivacyPolicyPage"
 
 function App() {
   const { theme } = useContext(ThemeContext);
@@ -17,7 +18,8 @@ function App() {
         {/* Landing Page */}
         <Route path="/" element={<><LandingPage /><Title /></>} />
         <Route path="/officers" element={<><OfficersPage /><Title /></>} />
-        
+        <Route path="/privacy-policy" element={<><PrivacyPolicyPage /><Title /></>} />
+
         {/* Auth */}
         <Route path="/login" element={<><Login /><Title /></>} />
       </Routes>

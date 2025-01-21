@@ -3,6 +3,7 @@ import RCYLogo from '../../assets/img/red-cross-youth.png'
 import SPCLogo from '../../assets/img/san-pedro.png'
 import { GoDotFill } from 'react-icons/go'
 import { FaFacebook } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   const email = "rcy@sanpedro.com";
@@ -18,7 +19,7 @@ const Footer = () => {
       items: [
         {title: "Home", link: "/"},
         {title: "About", link: "#about"},
-        {title: "Join Us", link: "#join-us"},
+        {title: "Join Us", link: "/#join-us"},
         {title: "Privacy Policy", link:"#join-us"}
       ]
     }
@@ -47,8 +48,8 @@ const Footer = () => {
               <h6 className="footer-title title">{group.title}</h6>
               {group.items.map((item) => (
                 <div className="flex flex-row justify-center gap-2 group hover:cursor-pointer" key={item.title}>
-                  <GoDotFill className='w-2 group-hover:text-[#00aaff]' />
-                  <a href={item.link} className="font-sm group-hover:text-[#00aaff]">{item.title}</a>
+                  <GoDotFill className='w-2 text-[#00679b] group-hover:text-[#00aaff] pt-1' />
+                  <a href={item.link} className="font-sm font-semibold text-[#00679b] group-hover: hover:text-[#00aaff]">{item.title}</a>
                 </div>
               ))}
             </nav>
@@ -57,8 +58,8 @@ const Footer = () => {
           <nav>
             <h6 className="footer-title title">Contact Us</h6>
               <div className="flex flex-col justify-center gap-2">
-                <p className='hover:cursor-pointer'><strong>Email:</strong> <a href={`mailto:${email}`} className='hover:text-[#00aaff]'>{email}</a></p>
-                <p><strong>Mobile:</strong> {mobile}</p>
+                <p><strong>Email:</strong> <a href={`mailto:${email}`} className='font-semibold text-[#00679b] hover:text-[#00aaff] cursor-pointer'>{email}</a></p>
+                <p><strong>Mobile:</strong> <span className='font-semibold text-[#00679b] hover:text-[#00aaff]'>{mobile}</span></p>
               </div>
           </nav>
 
@@ -71,6 +72,10 @@ const Footer = () => {
               </div>
           </nav>
         </footer>
+      </div>
+
+      <div className='flex justify-center py-4 footer-container' >
+          <p className='text-sm font-semibold title'>Copyright © 2025 City of San Pedro Red Cross Youth</p>
       </div>
     </>
   )

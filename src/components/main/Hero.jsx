@@ -13,7 +13,27 @@ const Hero = () => {
       duration: 1000,
       once: true,
     });
-  }, [])
+  }, []);
+
+  useEffect(() => {
+    const scrolltoHash = () => {
+      const hash = window.location.hash;
+      if (hash) {
+        const element = document.querySelector(hash)
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' })
+        }
+      }
+    }
+
+    scrolltoHash();
+
+    window.addEventListener('hashchange', scrolltoHash);
+
+    return () => {
+      window.removeEventListener('hashchange', scrolltoHash)
+    }
+  }, []);
 
   return (
     <div className="hero md:min-h-screen min-w-screen py-20 px-8 md:p-8">
@@ -21,7 +41,7 @@ const Hero = () => {
       <div className="hidden md:flex dark:opacity-5 absolute inset-0 z-1 h-full w-full black bg-[linear-gradient(to_right,#dbdbdb3c_1px,transparent_1px),linear-gradient(to_bottom,#dbdbdb3c_1px,transparent_1px)] bg-[size:6rem_4rem]"></div>
 
       {/* Radial Dot */}
-      <div className="hidden dark:flex circlePosition w-[100px] lg:w-[1000px] h-[400px]  bg-[#084eff37] rounded-[100%] absolute z-1  top-[-50%] left-[0] translate-x-[-50%] translate-y-[50%] blur-[100px] lg:blur-[200px] "></div>
+      {/* <div className="hidden dark:flex circlePosition w-[100px] lg:w-[1000px] h-[400px]  bg-[#084eff37] rounded-[100%] absolute z-1  top-[-50%] left-[0] translate-x-[-50%] translate-y-[50%] blur-[100px] lg:blur-[200px] "></div> */}
 
       {/* Main Hero Content */}
       <div className="hero-content text-center z-20">

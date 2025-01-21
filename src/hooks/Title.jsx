@@ -3,10 +3,13 @@ import { useLocation } from 'react-router-dom';
 
 const Title = () => {
   const location = useLocation();
+  const rcy = 'Red Cross Youth - City of San Pedro';
 
   const routes = {
-    '/': 'Red Cross Youth - City of San Pedro',
-    '/login': 'Login | Red Cross Youth - City of San Pedro'
+    '/': `${rcy}`,
+    '/login': `Login | ${rcy}`,
+    '/officers': `Officers | ${rcy}`,
+    '/privacy-policy': `Privacy Policy | ${rcy}`,
   }
 
   useEffect(() => {

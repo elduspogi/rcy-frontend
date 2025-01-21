@@ -14,24 +14,21 @@ const About = () => {
   const tabContent = {
     tab1: (
       <div>
-        <h2 className='mb-3 text-2xl font-bold'>Who are we</h2>
+        <h2 className='mb-3 text-2xl font-bold border-l-4 border-[#00aaff] pl-4'>Who are we</h2>
+        <p className='mb-2'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae ipsa distinctio sit non vitae necessitatibus, totam odio fugiat saepe quia magnam! Reiciendis quam excepturi quod voluptatem rerum veritatis molestias facere!</p>
         <p className='mb-2'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae ipsa distinctio sit non vitae necessitatibus, totam odio fugiat saepe quia magnam! Reiciendis quam excepturi quod voluptatem rerum veritatis molestias facere!</p>
       </div>
     ),
     tab2: (
       <div>
-        <h2 className='mb-3 text-2xl font-bold'>About</h2>
+        <h2 className='mb-3 text-2xl font-bold border-l-4 border-[#00aaff] pl-4'>Our Mission</h2>
         <p className='mb-2'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae ipsa distinctio sit non vitae necessitatibus, totam odio fugiat saepe quia magnam! Reiciendis quam excepturi quod voluptatem rerum veritatis molestias facere!</p>
       </div>
     ),
     tab3: (
       <div>
-        <h2 className='mb-3 text-2xl font-bold'>FAQs</h2>
+        <h2 className='mb-3 text-2xl font-bold border-l-4 border-[#00aaff] pl-4'>What we do</h2>
         <p className='mb-2'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae ipsa distinctio sit non vitae necessitatibus, totam odio fugiat saepe quia magnam! Reiciendis quam excepturi quod voluptatem rerum veritatis molestias facere!</p>
-        <p className="border-l-4 border-purple-500 pl-4">
-          Lorem ipsum dolor sit amet consectetur!
-        </p>
-        <p className="mt-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates alias id modi sequi eos nihil illo est earum at, quas mollitia deserunt! Velit nisi est repellendus perferendis iure debitis officia!</p>
       </div>
     ),
   }
@@ -41,16 +38,16 @@ const About = () => {
       <div className='mx-2 lg:mx-40 component'>
         <SmallHeader title="ABOUT" desc="Learn more about" rcy="Red Cross Youth" />
 
-        <div className='flex flex-col md:flex-row-reverse gap-8 lg:px-24'>
-          <div className='md:w-1/2'>
+        <div className='flex flex-col md:flex-row-reverse gap-4 xl:px-24'>
+          <div className='md:w-2/5'>
             <img 
               src={aboutImg} 
               alt="Red Cross About Image" 
-              className="w-[500px] rounded-lg object-contain md:rotate-3" 
+              className="w-full rounded-lg object-contain md:rotate-3 shadow-lg" 
             />
           </div>
 
-          <div className='w-full md:w-1/2 bg-transparent space-y-5'>
+          <div className='w-full md:w-3/5 bg-transparent space-y-5'>
               <div className="flex flex-wrap border-b border-[#acacac6f]">
                 {tabs.map((tab) => (
                   <button 

@@ -18,10 +18,10 @@ const DonateBlood = () => {
               className='object-cover h-full'
             />
           </figure>
-          <div className="card-body md:1/2 lg:w-3/5 p-2 md:px-5 lg:px-10 py-4 lg:py-10">
-            <div className="border-l-4 border-[#00aaff] px-2 md:px-5 mb-6">
-              <h2 className="card-title">Donate shits!</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam animi ab itaque perferendis nesciunt illum iusto obcaecati earum pariatur consectetur! Commodi modi beatae officiis repellendus possimus placeat doloremque non aut?.</p>
+          <div className="card-body md:1/2 lg:w-3/5 p-2 md:px-5 lg:px-10 py-4 lg:py-10 justify-center">
+            <div className="mb-6">
+              <h2 className="card-title mb-3 text-xl lg:text-3xl title font-bold">Want to help others?</h2>
+              <p className='border-l-4 border-[#fe006e] px-2'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam animi ab itaque perferendis nesciunt illum iusto obcaecati earum pariatur consectetur! Commodi modi beatae officiis repellendus possimus placeat doloremque non aut?.</p>
             </div>
             <div className="card-actions justify-center">
               <Button className="w-full" text="Check for Donation Drives" link="/" icon={<FaArrowRightLong />} />

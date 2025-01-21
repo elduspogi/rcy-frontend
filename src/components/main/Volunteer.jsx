@@ -1,6 +1,5 @@
 import React from 'react'
 import SmallHeader from './SmallHeader'
-import { RiShakeHandsFill } from 'react-icons/ri'
 import { FaHandsHelping } from 'react-icons/fa'
 import { MdOutlinePeopleAlt } from 'react-icons/md'
 import { FaArrowRightLong } from 'react-icons/fa6'
@@ -11,21 +10,21 @@ const Volunteer = () => {
       id: 1,
       title: "Member",
       desc: "lorem lorem lorem",
-      icon: <MdOutlinePeopleAlt className="text-8xl bg-[#00aaff7a] dark:bg-[#00679b] text-[#00679b] dark:text-[#1d232a] p-4 rounded-md" />,
+      icon: <MdOutlinePeopleAlt className="text-8xl bg-[#00aaff7a] dark:bg-[#00aaff] text-[#00679b] dark:text-[#1d232a] p-4 rounded-md icon" />,
       link: "/"
     },
     {
       id: 2,
       title: "Volunteer",
       desc: "lorem lorem lorem",
-      icon: <FaHandsHelping className="text-8xl bg-[#00aaff7a] dark:bg-[#00679b] text-[#00679b] dark:text-[#1d232a] p-4 rounded-md" />,
+      icon: <FaHandsHelping className="text-8xl bg-[#00aaff7a] dark:bg-[#00aaff] text-[#00679b] dark:text-[#1d232a] p-4 rounded-md icon" />,
       link: "/"
     },
     // {
     //   id: 3,
     //   title: "Partner",
     //   desc: "lorem lorem lorem",
-    //   icon: <RiShakeHandsFill className="text-8xl bg-[#00aaff7a] dark:bg-[#00679b] text-[#00679b] dark:text-[#1d232a] p-4 rounded-md" />,
+    //   icon: <FaHandsHelping className="text-8xl bg-[#00aaff7a] dark:bg-[#00aaff] text-[#00679b] dark:text-[#1d232a] p-4 rounded-md icon" />,
     //   link: "/"
     // },
   ]
@@ -35,22 +34,20 @@ const Volunteer = () => {
       <div className='mx-2 lg:mx-40 py-16'>
         <SmallHeader title="JOIN US" desc="Be a volunteer at " rcy="Red Cross Youth" />
 
-        <div className="flex flex-col md:flex-row gap-4 lg:gap-12 md:px-16 lg:px-24">
+        <div className="flex flex-col md:flex-row gap-4 md:gap-6 lg:gap-12 xl:px-24">
           {cards.map((card) => (
-            <div className="card bg-base-100 w-full rounded-md volunteer-card hover:md:scale-105 hover:md:rotate-3" key={card.id}>
+            <a href={card.link} key={card.id} className="card w-full rounded-md volunteer-card group group-hover:bg-[#00aaff]">
               <figure className="px-10 pt-10">
                 {card.icon}
               </figure>
-              <div className="card-body items-center text-center">
-                <h2 className="card-title text-3xl">{card.title}</h2>
+              <div className="card-body items-center text-center card-texts">
+                <h2 className="card-title text-2xl lg:text-3xl">{card.title}</h2>
                 <p>{card.desc}</p>
                 <div className="card-actions">
-                  <a href="/">
-                    <button className='flex flex-row items-center px-4 py-2 rounded-lg text-sm gap-2 bg-[#00aaff] hover:bg-[#00679b] dark:bg-[#00679b] hover:dark:bg-[#00aaff] text-white'>Register <FaArrowRightLong /></button>
-                  </a>
+                  <p className='flex flex-row items-center gap-1 font-semibold pt-2'>Register <FaArrowRightLong className='arrow-right' /></p>
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>

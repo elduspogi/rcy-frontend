@@ -17,11 +17,8 @@ const ThemeProvider = ({ children }) => {
 	const [ theme, setTheme ] = useState(getTheme);
 
 	const toggleTheme = () => {
-		if(theme === 'dark') {
-			setTheme('light');
-		} else {
-			setTheme('dark');
-		}
+		const newTheme = theme === 'dark' ? 'light' : 'dark';
+		setTheme(newTheme);
 	}
 
 	useEffect(() => {

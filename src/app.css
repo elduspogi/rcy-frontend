@@ -8,6 +8,7 @@
     --card-border: #acacac6f;
     --via: #5d00ff;
     --dark: #1d232a;
+    --text-dark: #a6adbb;
 }
 
 html {
@@ -69,26 +70,41 @@ body {
     background-color: #dbdbdb1b;
 }
 
-.volunteer-card {
-    position: relative;
-    transform-style: preserve-3d;
+body[data-theme="light"] .volunteer-card {
+    /* position: relative;
+    transform-style: preserve-3d; */
     border: none !important;
+    box-shadow:  0px 5px 10px 0px rgba(165, 165, 165, 0.3) !important;
 }
 
-.volunteer-card::before {
-    content: "";
-    position: absolute; 
-    inset: 0px;
-    background: conic-gradient(from 90deg at 40% -25%, var(--rcy-blue), var(--rcy-red));
-    filter: blur(10px);
-    transform: translate3d(0px,0px,-1px);
-    border-radius: inherit;
-    pointer-events: none;
+body[data-theme="dark"] .volunteer-card {
+    border: none !important;
+    box-shadow:  0px 5px 10px 0px rgba(10, 10, 10, 0.3) !important;
 }
 
-/* .card {
-    border: none !important;
-} */
+.volunteer-card:hover {
+    background-color: var(--rcy-dark-blue);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.volunteer-card:hover .icon {
+    background-color: #fff;
+    color: var(--rcy-dark-blue);
+}
+
+.volunteer-card:hover .card-texts {
+    color: #fff;
+    transition: color 0s ease-in-out;
+}
+
+.volunteer-card:hover .arrow-right {
+    transform: translateX(50%);
+    transition: transform 0.5s ease-in-out;
+}
+
+.arrow-right {
+    transition: transform 0.5s ease-in-out;
+}
 
 .footer-container {
     border-top: 1px solid var(--card-border);
