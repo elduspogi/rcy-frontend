@@ -4,6 +4,7 @@ import { ThemeContext } from '../../hooks/Theme'
 import Logo from '../../assets/img/red-cross-youth.png'
 import { FiMenu } from 'react-icons/fi'
 import { goToTop, isScrolled } from '../../hooks/Scroll'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -22,39 +23,37 @@ const Navbar = () => {
           <ul
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-            <li onClick={handleGoToTop}><a>Home</a></li>
-            <li><a>Events</a></li>
-            <li><a>News</a></li>
+            <li><Link to='/' >Home</Link></li>
+            <li><a href='/#about'>About</a></li>
             <li>
               <a>Join Us</a>
               <ul className="p-2">
-                <li><a>Be a Volunteer</a></li>
-                <li><a>Be a Member</a></li>
-                <li><a>Be a Donor</a></li>
+                <li><a href='/#join-us'>Be a Volunteer</a></li>
+                <li><a href='/#join-us'>Be a Member</a></li>
+                <li><a href='/#partner'>Be a Partner</a></li>
               </ul>
             </li>
             <li onClick={() => toggleTheme()}><a>{theme === 'light' ? 'Dark Mode' : 'Light Mode'}</a></li>
           </ul>
         </div>
-        <img src={Logo} alt="Red Cross Youth Logo" className='object-cover size-8 mr-2 hidden lg:flex logo' />
+        <img src={Logo} alt="Red Cross Youth Logo" className='object-cover size-8 mr-2 logo' />
         <a className="text-xl font-semibold hidden lg:flex title" href='/'>Red Cross Youth</a>
-        <img src={Logo} alt="Red Cross Youth Logo" className='object-cover size-8 lg:hidden' />
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <li onClick={handleGoToTop}><a>Home</a></li>
-          <li><a href='#about'>Events</a></li>
-          <li><a>News</a></li>
+          <li><Link to='/' >Home</Link></li>
+          <li><a href='/#about'>About</a></li>
           <li>
             <details>
               <summary>Join Us</summary>
               <ul className="p-2">
-                <li><a href='#join-us'>Volunteer</a></li>
-                <li><a href='#join-us'>Member</a></li>
-                <li><a href='#partner'>Partner</a></li>
+                <li><a href='/#join-us'>Volunteer</a></li>
+                <li><a href='/#join-us'>Member</a></li>
+                <li><a href='/#partner'>Partner</a></li>
               </ul>
             </details>
           </li>
+          <li><a href='/#faqs'>FAQs</a></li>
         </ul>
       </div>
       <div className="navbar-end hidden lg:flex">

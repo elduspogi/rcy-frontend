@@ -18,9 +18,9 @@ const Footer = () => {
       title: "Sitemap",
       items: [
         {title: "Home", link: "/"},
-        {title: "About", link: "#about"},
+        {title: "About", link: "/#about"},
         {title: "Join Us", link: "/#join-us"},
-        {title: "Privacy Policy", link:"#join-us"}
+        {title: "Privacy Policy", link:"/privacy-policy"}
       ]
     }
   ]
@@ -49,7 +49,12 @@ const Footer = () => {
               {group.items.map((item) => (
                 <div className="flex flex-row justify-center gap-2 group hover:cursor-pointer" key={item.title}>
                   <GoDotFill className='w-2 text-[#00679b] group-hover:text-[#00aaff] pt-1' />
-                  <a href={item.link} className="font-sm font-semibold text-[#00679b] group-hover: hover:text-[#00aaff]">{item.title}</a>
+                  {item.link === '/privacy-policy' || item.link === '/'
+                    ? 
+                    <Link to={item.link} className="font-sm font-semibold text-[#00679b] group-hover: hover:text-[#00aaff]">{item.title}</Link> 
+                    : 
+                    <a href={item.link} className="font-sm font-semibold text-[#00679b] group-hover: hover:text-[#00aaff]">{item.title}</a>
+                  }
                 </div>
               ))}
             </nav>

@@ -40,7 +40,7 @@ const Faqs = () => {
   }
 
   return (
-    <div className='mx-2 lg:mx-40 component'>
+    <div className='mx-2 lg:mx-40 component' id='faqs'>
       <SmallHeader title="FAQ" desc="Frequently asked questions about " rcy="Red Cross Youth"/>
       <div className="flex flex-col lg:flex-row gap-0 md:gap-2">
         <div className="join join-vertical w-full rounded-none">

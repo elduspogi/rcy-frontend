@@ -10,6 +10,9 @@ const Title = () => {
     '/login': `Login | ${rcy}`,
     '/officers': `Officers | ${rcy}`,
     '/privacy-policy': `Privacy Policy | ${rcy}`,
+    '/register/member': `Register | ${rcy}`,
+    '/register/volunteer' : `Register | ${rcy}`,
+    '/register/partner' : `Register | ${rcy}`,
   }
 
   useEffect(() => {

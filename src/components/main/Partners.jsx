@@ -51,7 +51,7 @@ const Partners = () => {
       </div>
 
       <div className="flex justify-center">
-        <Button text="Sign up as a partner" icon={<FaArrowRightLong />} /> 
+        <Button text="Sign up as a partner" link="/register/partner" icon={<FaArrowRightLong />} /> 
       </div>
     </div>
     </>

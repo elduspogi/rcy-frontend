@@ -1,7 +1,7 @@
 import React from 'react'
 import RCYLogo from '../../assets/img/red-cross-youth.png'
 import SPCLogo from '../../assets/img/san-pedro.png'
-import Button from './Button'
+import Button, { HeroButton } from './Button'
 import { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
@@ -50,7 +50,7 @@ const Hero = () => {
           <h1 className="text-3xl md:text-6xl lg:text-8xl font-bold mb-6 title" data-aos="fade-up" data-aos-delay="300">Red Cross Youth</h1>
           
           <div className="flex flex-row gap-4 md:gap-8 justify-center mb-6" data-aos="fade-up" data-aos-delay="600">
-            <Button text="Learn more" link="#about" />
+            <HeroButton text="Learn more" link="#about" />
 
             <div className="flex max-w-sm rounded-xl bg-gradient-to-r from-[#fe006e] to-[#0095ff9f] p-0.5 shadow-lg hero-button">
               <a href="#join-us">

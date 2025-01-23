@@ -3,6 +3,8 @@ import SmallHeader from './SmallHeader'
 import { FaHandsHelping } from 'react-icons/fa'
 import { MdOutlinePeopleAlt } from 'react-icons/md'
 import { FaArrowRightLong } from 'react-icons/fa6'
+import { Link } from 'react-router-dom'
+import { BsCardList } from 'react-icons/bs'
 
 const Volunteer = () => {
   const cards = [
@@ -11,22 +13,15 @@ const Volunteer = () => {
       title: "Member",
       desc: "lorem lorem lorem",
       icon: <MdOutlinePeopleAlt className="text-8xl bg-[#00aaff7a] dark:bg-[#00aaff] text-[#00679b] dark:text-[#1d232a] p-4 rounded-md icon" />,
-      link: "/"
+      link: "/register/member"
     },
     {
       id: 2,
       title: "Volunteer",
       desc: "lorem lorem lorem",
       icon: <FaHandsHelping className="text-8xl bg-[#00aaff7a] dark:bg-[#00aaff] text-[#00679b] dark:text-[#1d232a] p-4 rounded-md icon" />,
-      link: "/"
-    },
-    // {
-    //   id: 3,
-    //   title: "Partner",
-    //   desc: "lorem lorem lorem",
-    //   icon: <FaHandsHelping className="text-8xl bg-[#00aaff7a] dark:bg-[#00aaff] text-[#00679b] dark:text-[#1d232a] p-4 rounded-md icon" />,
-    //   link: "/"
-    // },
+      link: "/register/volunteer"
+    }
   ]
 
   return (
@@ -36,7 +31,7 @@ const Volunteer = () => {
 
         <div className="flex flex-col md:flex-row gap-4 md:gap-6 lg:gap-12 xl:px-24">
           {cards.map((card) => (
-            <a href={card.link} key={card.id} className="card w-full rounded-md volunteer-card group group-hover:bg-[#00aaff]">
+            <Link to={card.link} key={card.id} className="card w-full rounded-md volunteer-card group group-hover:bg-[#00aaff]">
               <figure className="px-10 pt-10">
                 {card.icon}
               </figure>
@@ -47,7 +42,7 @@ const Volunteer = () => {
                   <p className='flex flex-row items-center gap-1 font-semibold pt-2'>Register <FaArrowRightLong className='arrow-right' /></p>
                 </div>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

@@ -7,6 +7,9 @@ import { useContext } from "react"
 import { ThemeContext } from "./hooks/Theme"
 import OfficersPage from "./pages/main/OfficersPage"
 import PrivacyPolicyPage from "./pages/main/PrivacyPolicyPage"
+import RegisterPage from "./pages/main/RegisterPage"
+import ScrollToTop from "./hooks/ScrollToTop"
+import PartnerRegister from "./pages/main/PartnerRegister"
 
 function App() {
   const { theme } = useContext(ThemeContext);
@@ -14,14 +17,25 @@ function App() {
   return (
     <div className={`App ${theme}`}>
     <BrowserRouter>
+
+      <ScrollToTop />
+
       <Routes>
         {/* Landing Page */}
         <Route path="/" element={<><LandingPage /><Title /></>} />
         <Route path="/officers" element={<><OfficersPage /><Title /></>} />
         <Route path="/privacy-policy" element={<><PrivacyPolicyPage /><Title /></>} />
 
+        {/* Registration */}
+        <Route path="/register/member" element={<><RegisterPage /><Title /></>} />
+        <Route path="/register/volunteer" element={<><RegisterPage /><Title /></>} />
+        <Route path="/register/partner" element={<><PartnerRegister /><Title /></>} />
+        
         {/* Auth */}
         <Route path="/login" element={<><Login /><Title /></>} />
+
+        {/* 404 Page */}
+        <Route path="/*" element={<><LandingPage /><Title /></>} />
       </Routes>
     </BrowserRouter>
     </div>
