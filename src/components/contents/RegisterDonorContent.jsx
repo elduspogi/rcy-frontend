@@ -16,10 +16,28 @@ const RegisterDonorContent = () => {
     age.push(<option key={i}>{i}</option>);
   }
 
+  const qualifications = [
+    { text: "Must be in", strong: "good health", suffix: "and generally feeling well (no cough, colds, fever, sore throat)." },
+    { text: "Must have at least", strong: "5 or more", suffix: "hours of uninterrupted sleep." },
+    { text: "Must be between", strong: "16 to 65 years old", suffix: "(16 and 17 need parent consent while first-time donors should be at the maximum age of 59, 60-65 years old are allowed to donate provided that they are a regular donor who donates blood annually.)" },
+    { text: "Must at least weigh", strong: "fifty(50) kilograms/one-hundred ten(110) pounds", suffix: "and above." },
+    { text: "Must have", strong: "no alcohol intake/smoking", suffix: "within twenty-four(24) hours." },
+    { text: "Tattoo and ear/body piercing can donate blood provided that they have the tattoo/piercing for", strong: "at least 1 year", suffix: "." },
+    { text: "Seafarer can donate blood", strong: "after one(1) year", suffix: "of stay in our country." },
+    { text: "Other qualifications will be", strong: "assessed upon physical assessment", suffix: "." }
+  ];
+
   return (
     <div className='mx-2 lg:mx-40 component'>
       <div className="pb-10">
-        <h1 className='text-md lg:text-lg text-[#00679b]'>Personal Details</h1>
+        <InputHeader title="Qualifications for Blood Donor" />
+        <div className='py-5'>
+          {qualifications.map((q, index) => (
+            <p key={index} className="text-sm py-2">{index + 1}. {q.text} <strong className='text-[#00679b]'>{q.strong}</strong> {q.suffix}</p>
+          ))}
+        </div>
+
+        <InputHeader title="Personal Details" />
         <PersonalInformation />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
