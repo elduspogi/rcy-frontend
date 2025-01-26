@@ -1,20 +1,19 @@
 import React from 'react'
-import Navbar from '../../components/main/Navbar'
 import HalfHero from '../../components/main/HalfHero'
-import Footer from '../../components/main/Footer'
-import ArrowTop from '../../components/main/ArrowTop'
 import OfficersContent from '../../components/contents/OfficersContent'
+import MainLayout from '../../layout/MainLayout'
 
 const OfficersPage = () => {
   return (
     <>
-      <Navbar />
-
-      <HalfHero title="Officers" />
-      <OfficersContent />
-      
-      <Footer />
-      <ArrowTop />
+      <MainLayout 
+        children={
+          <>
+            <HalfHero title="Officers" />
+            <OfficersContent />
+          </>
+        }
+      />
     </>
   )
 }

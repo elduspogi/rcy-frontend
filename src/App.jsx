@@ -10,6 +10,7 @@ import PrivacyPolicyPage from "./pages/main/PrivacyPolicyPage"
 import RegisterPage from "./pages/main/RegisterPage"
 import ScrollToTop from "./hooks/ScrollToTop"
 import PartnerRegister from "./pages/main/PartnerRegister"
+import DonorRegister from "./pages/main/DonorRegister"
 
 function App() {
   const { theme } = useContext(ThemeContext);
@@ -30,6 +31,7 @@ function App() {
         <Route path="/register/member" element={<><RegisterPage /><Title /></>} />
         <Route path="/register/volunteer" element={<><RegisterPage /><Title /></>} />
         <Route path="/register/partner" element={<><PartnerRegister /><Title /></>} />
+        <Route path="/register/donor" element={<><DonorRegister /><Title /></>} />
         
         {/* Auth */}
         <Route path="/login" element={<><Login /><Title /></>} />

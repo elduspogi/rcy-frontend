@@ -1,15 +1,14 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import { CiLight, CiDark } from 'react-icons/ci'
 import { ThemeContext } from '../../hooks/Theme'
 import Logo from '../../assets/img/red-cross-youth.png'
 import { FiMenu } from 'react-icons/fi'
-import { goToTop, isScrolled } from '../../hooks/Scroll'
+import { isScrolled } from '../../hooks/Scroll'
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
   const isBackground = isScrolled(25);
-  const handleGoToTop = () => goToTop();
 
   return (
     <div className={`navbar p-0 lg:px-4 fixed bg-transparent z-50 transition-all duration-300 ease-in-out ${
@@ -57,9 +56,12 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end hidden lg:flex">
-        <div className="text-2xl rounded-full p-2 bg-slate-200 dark:bg-gray-700 hover:cursor-pointer hover:bg-slate-300 hover:dark:bg-slate-300 hover:dark:text-gray-800" onClick={() => toggleTheme()}>
-          {theme === 'light' ? <CiDark /> : <CiLight />}
-        </div>
+        <label className="swap swap-rotate text-2xl rounded-full p-2 bg-slate-200 dark:bg-gray-700 hover:cursor-pointer hover:bg-slate-300 hover:dark:bg-slate-300 hover:dark:text-gray-800">
+          <input type="checkbox" className="theme-controller" value="synthwave" checked={theme === 'light' ? true : false } onChange={toggleTheme} />
+
+          <CiLight className='swap-off' />
+          <CiDark className='swap-on' />
+        </label>
       </div>
     </div>
   )

@@ -1,16 +1,16 @@
 import React from 'react'
 import HalfHero from '../../components/main/HalfHero'
-import PrivacyPolicyContent from '../../components/contents/PrivacyPolicyContent'
 import MainLayout from '../../layout/MainLayout'
+import RegisterDonorContent from '../../components/contents/RegisterDonorContent'
 
-const PrivacyPolicyPage = () => {
+const DonorRegister = () => {
   return (
     <>
       <MainLayout 
         children={
           <>
-            <HalfHero title="Privacy Policy" />
-            <PrivacyPolicyContent />
+            <HalfHero title="Be a donor" />
+            <RegisterDonorContent />
           </>
         }
       />
@@ -18,4 +18,4 @@ const PrivacyPolicyPage = () => {
   )
 }
 
-export default PrivacyPolicyPage
+export default DonorRegister

@@ -4,7 +4,6 @@ import { FaHandsHelping } from 'react-icons/fa'
 import { MdOutlinePeopleAlt } from 'react-icons/md'
 import { FaArrowRightLong } from 'react-icons/fa6'
 import { Link } from 'react-router-dom'
-import { BsCardList } from 'react-icons/bs'
 
 const Volunteer = () => {
   const cards = [

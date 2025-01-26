@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom'
 
 const Title = () => {
   const location = useLocation();
@@ -13,6 +13,7 @@ const Title = () => {
     '/register/member': `Register | ${rcy}`,
     '/register/volunteer' : `Register | ${rcy}`,
     '/register/partner' : `Register | ${rcy}`,
+    '/register/donor' : `Register | ${rcy}`,
   }
 
   useEffect(() => {
