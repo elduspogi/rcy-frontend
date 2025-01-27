@@ -14,11 +14,12 @@ const Title = () => {
     '/register/volunteer' : `Register | ${rcy}`,
     '/register/partner' : `Register | ${rcy}`,
     '/register/donor' : `Register | ${rcy}`,
+    '/request/donor' : `Request for Donor | ${rcy}`,
   }
 
   useEffect(() => {
     const title = routes[location.pathname];
-    document.title = title;
+    title === undefined ? document.title = rcy : document.title = title;
   }, [location]);
 }
 

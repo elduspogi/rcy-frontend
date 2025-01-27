@@ -48,12 +48,12 @@ const Footer = () => {
               <h6 className="footer-title title">{group.title}</h6>
               {group.items.map((item) => (
                 <div className="flex flex-row justify-center gap-2 group hover:cursor-pointer" key={item.title}>
-                  <GoDotFill className='w-2 text-[#00679b] group-hover:text-[#00aaff] pt-1' />
+                  <GoDotFill className='w-2 text-[#fe006e] group-hover:text-[#fe006e7a] pt-1' />
                   {item.link === '/privacy-policy' || item.link === '/'
                     ? 
-                    <Link to={item.link} className="font-sm font-semibold text-[#00679b] group-hover: hover:text-[#00aaff]">{item.title}</Link> 
+                    <Link to={item.link} className="font-sm font-semibold dark:font-normal text-[#fe006e] hover:text-[#fe006e7a]">{item.title}</Link> 
                     : 
-                    <a href={item.link} className="font-sm font-semibold text-[#00679b] group-hover: hover:text-[#00aaff]">{item.title}</a>
+                    <a href={item.link} className="font-sm font-semibold dark:font-normal text-[#fe006e] hover:text-[#fe006e7a]">{item.title}</a>
                   }
                 </div>
               ))}
@@ -63,15 +63,15 @@ const Footer = () => {
           <nav>
             <h6 className="footer-title title">Contact Us</h6>
               <div className="flex flex-col justify-center gap-2">
-                <p><strong>Email:</strong> <a href={`mailto:${email}`} className='font-semibold text-[#00679b] hover:text-[#00aaff] cursor-pointer'>{email}</a></p>
-                <p><strong>Mobile:</strong> <span className='font-semibold text-[#00679b] hover:text-[#00aaff]'>{mobile}</span></p>
+                <p><strong>Email:</strong> <a href={`mailto:${email}`} className='font-semibold text-[#fe006e] hover:text-[#fe006e7a] cursor-pointer'>{email}</a></p>
+                <p><strong>Mobile:</strong> <span className='font-semibold text-[#fe006e]'>{mobile}</span></p>
               </div>
           </nav>
 
           <nav>
             <h6 className="footer-title title">Socials</h6>
               <div className="flex flex-col justify-center gap-2">
-                <a href={socials[0]} target='_blank' className='text-3xl text-[#00aaff] hover:text-[#00679b] dark:text-[#00679b] hover:dark:text-[#00aaff]'>
+                <a href={socials[0]} target='_blank' className='text-3xl text-[#fe006e] hover:text-[#fe006e7a]'>
                   <FaFacebook />
                 </a>
               </div>
@@ -80,7 +80,7 @@ const Footer = () => {
       </div>
 
       <div className='flex justify-center py-4 footer-container' >
-          <p className='text-sm font-semibold title'>Copyright © 2025 City of San Pedro Red Cross Youth</p>
+          <p className='text-xs md:text-sm font-semibold title'>Copyright © 2025 City of San Pedro Red Cross Youth</p>
       </div>
     </>
   )

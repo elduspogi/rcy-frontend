@@ -2,6 +2,7 @@
 
 :root {
     --rcy-red: #fe006e;
+    --rcy-light-red: #ff348c7a;
     --rcy-blue: #00aaff7a;
     --rcy-dark-blue: #00679b;
     --rcy-light-blue: #00aaff;
@@ -30,33 +31,64 @@ body[data-theme="dark"] .card {
     border: 0.5px solid rgba(255, 255, 255, 0.2);
 }
 
-body[data-theme="dark"] .title, body[data-theme="light"] .title {
-    background-image: linear-gradient(to right, var(--rcy-red), var(--rcy-light-blue));
+body[data-theme="dark"] .title {
+    background-image: linear-gradient(to right, var(--rcy-red), var(--rcy-light-red));
+    background-clip: text;
+    color: transparent;
+}
+
+body[data-theme="light"] .title {
+    background-image: linear-gradient(to right, var(--rcy-red), var(--rcy-light-red));
     background-clip: text;
     color: transparent;
 }
 
 /* Glowing Logos */
-body[data-theme="dark"] .blue-logo {
-    filter: drop-shadow(0px 0px 25px var(--rcy-blue));
+/* body[data-theme="dark"] .blue-logo {
+    filter: drop-shadow(0px 0px 25px var(--rcy-red));
 }
 
 body[data-theme="dark"] .red-logo {
     filter: drop-shadow(0px 0px 25px var(--rcy-red));
-}
+} */
 
 .hero-button {
     transition: filter 0.3s ease-in-out;
 }
-.hero-button:hover {
-    filter: drop-shadow(0px 0px 10px var(--rcy-blue));
+
+.login-button {
+    border: none;
+    background-color: var(--rcy-red);
+    transition: filter 0.3s ease-in-out;
 }
 
-body[data-theme="light"] .navbar {
+.login-button:hover {
+    background-color: var(--rcy-red);
+    filter: drop-shadow(0px 0px 10px var(--rcy-red));
+    transition: filter 0.3s ease-in-out;
+}
+
+.join-us-button {
+    filter: drop-shadow(0px 0px 15px var(--rcy-red));
+    transition: filter 0.3s ease-in-out;
+}
+
+.join-us-button:hover {
+    filter: drop-shadow(0px 0px 0px var(--rcy-red));
+    transition: filter 0.3s ease-in-out;
+}
+
+.hero-button:hover {
+    filter: drop-shadow(0px 0px 10px var(--rcy-red));
+    background-color: var(--rcy-light-red);
+    transition: filter 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+body[data-theme="light"] .navbar-shadow {
     filter: drop-shadow(0px 0px 10px var(--card-border));
 }
 
-body[data-theme="dark"] .navbar {
+body[data-theme="dark"] .navbar-shadow {
     box-shadow:  0px 0px 10px 0px var(--dark);
 }
 
@@ -75,21 +107,29 @@ body[data-theme="light"] .volunteer-card {
     transform-style: preserve-3d; */
     border: none !important;
     box-shadow:  0px 5px 10px 0px rgba(165, 165, 165, 0.3) !important;
+    transition: background-color 0.2s ease-in-out;
 }
 
 body[data-theme="dark"] .volunteer-card {
     border: none !important;
     box-shadow:  0px 5px 10px 0px rgba(10, 10, 10, 0.3) !important;
+    transition: background-color 0.2s ease-in-out;
 }
 
-.volunteer-card:hover {
-    background-color: var(--rcy-dark-blue);
+body[data-theme="light"] .volunteer-card:hover {
+    background-color: var(--rcy-red);
+    transition: background-color 0.2s ease-in-out;
+}
+
+body[data-theme="dark"] .volunteer-card:hover {
+    background-color: var(--rcy-light-red);
     transition: background-color 0.2s ease-in-out;
 }
 
 .volunteer-card:hover .icon {
     background-color: #fff;
-    color: var(--rcy-dark-blue);
+    color: var(--rcy-red);
+    transition: background-color 0.2s ease-in-out;
 }
 
 .volunteer-card:hover .card-texts {

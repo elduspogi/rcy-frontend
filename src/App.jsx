@@ -11,6 +11,8 @@ import RegisterPage from "./pages/main/RegisterPage"
 import ScrollToTop from "./hooks/ScrollToTop"
 import PartnerRegister from "./pages/main/PartnerRegister"
 import DonorRegister from "./pages/main/DonorRegister"
+import Error404 from "./pages/error/Error404"
+import RequestForDonorPage from "./pages/main/RequestForDonorPage"
 
 function App() {
   const { theme } = useContext(ThemeContext);
@@ -32,12 +34,15 @@ function App() {
         <Route path="/register/volunteer" element={<><RegisterPage /><Title /></>} />
         <Route path="/register/partner" element={<><PartnerRegister /><Title /></>} />
         <Route path="/register/donor" element={<><DonorRegister /><Title /></>} />
+
+        {/* Request for Donor Page */}
+        <Route path="/request/donor" element={<><RequestForDonorPage /><Title /></>} />
         
         {/* Auth */}
         <Route path="/login" element={<><Login /><Title /></>} />
 
         {/* 404 Page */}
-        <Route path="/*" element={<><LandingPage /><Title /></>} />
+        <Route path="/*" element={<><Error404 /><Title /></>} />
       </Routes>
     </BrowserRouter>
     </div>

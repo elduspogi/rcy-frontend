@@ -12,7 +12,7 @@ const Navbar = () => {
 
   return (
     <div className={`navbar p-0 lg:px-4 fixed bg-transparent z-50 transition-all duration-300 ease-in-out ${
-      isBackground ? 'bg-white dark:bg-slate-800' : 'bg-transparent'
+      isBackground ? 'bg-white dark:bg-slate-800 navbar-shadow' : 'bg-transparent'
     }`} id='navbar'>
       <div className="navbar-start">
         <div className="dropdown">
@@ -27,9 +27,9 @@ const Navbar = () => {
             <li>
               <a>Join Us</a>
               <ul className="p-2">
-                <li><a href='/#join-us'>Be a Volunteer</a></li>
-                <li><a href='/#join-us'>Be a Member</a></li>
-                <li><a href='/#partner'>Be a Partner</a></li>
+                <li><Link to='/register/member'>Member</Link></li>
+                <li><Link to='/register/volunteer'>Volunteer</Link></li>
+                <li><Link to='/register/partner'>Partner</Link></li>
               </ul>
             </li>
             <li onClick={() => toggleTheme()}><a>{theme === 'light' ? 'Dark Mode' : 'Light Mode'}</a></li>
@@ -46,9 +46,9 @@ const Navbar = () => {
             <details>
               <summary>Join Us</summary>
               <ul className="p-2">
-                <li><a href='/#join-us'>Volunteer</a></li>
-                <li><a href='/#join-us'>Member</a></li>
-                <li><a href='/#partner'>Partner</a></li>
+                <li><Link to='/register/member'>Member</Link></li>
+                <li><Link to='/register/volunteer'>Volunteer</Link></li>
+                <li><Link to='/register/partner'>Partner</Link></li>
               </ul>
             </details>
           </li>

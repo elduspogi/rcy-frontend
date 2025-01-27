@@ -10,15 +10,15 @@ const Volunteer = () => {
     {
       id: 1,
       title: "Member",
-      desc: "lorem lorem lorem",
-      icon: <MdOutlinePeopleAlt className="text-8xl bg-[#00aaff7a] dark:bg-[#00aaff] text-[#00679b] dark:text-[#1d232a] p-4 rounded-md icon" />,
+      desc: "Be a part of change with Red Cross Youth",
+      icon: <MdOutlinePeopleAlt className="text-8xl bg-[#fe006e] text-white dark:text-[#1d232a] p-4 rounded-md icon" />,
       link: "/register/member"
     },
     {
       id: 2,
       title: "Volunteer",
-      desc: "lorem lorem lorem",
-      icon: <FaHandsHelping className="text-8xl bg-[#00aaff7a] dark:bg-[#00aaff] text-[#00679b] dark:text-[#1d232a] p-4 rounded-md icon" />,
+      desc: "Be a reserve volunteer for Red Cross Youth",
+      icon: <FaHandsHelping className="text-8xl bg-[#fe006e] text-white dark:text-[#1d232a] p-4 rounded-md icon" />,
       link: "/register/volunteer"
     }
   ]

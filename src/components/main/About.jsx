@@ -14,20 +14,20 @@ const About = () => {
   const tabContent = {
     tab1: (
       <div>
-        <h2 className='mb-3 text-2xl font-bold border-l-4 border-[#00aaff] pl-4'>Who are we</h2>
+        <h2 className='mb-3 text-2xl text-[#fe006e] font-bold border-l-4 border-[#fe006e] pl-4'>Who are we</h2>
         <p className='mb-2'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae ipsa distinctio sit non vitae necessitatibus, totam odio fugiat saepe quia magnam! Reiciendis quam excepturi quod voluptatem rerum veritatis molestias facere!</p>
         <p className='mb-2'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae ipsa distinctio sit non vitae necessitatibus, totam odio fugiat saepe quia magnam! Reiciendis quam excepturi quod voluptatem rerum veritatis molestias facere!</p>
       </div>
     ),
     tab2: (
       <div>
-        <h2 className='mb-3 text-2xl font-bold border-l-4 border-[#00aaff] pl-4'>Our Mission</h2>
+        <h2 className='mb-3 text-2xl text-[#fe006e] font-bold border-l-4 border-[#fe006e] pl-4'>Our Mission</h2>
         <p className='mb-2'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae ipsa distinctio sit non vitae necessitatibus, totam odio fugiat saepe quia magnam! Reiciendis quam excepturi quod voluptatem rerum veritatis molestias facere!</p>
       </div>
     ),
     tab3: (
       <div>
-        <h2 className='mb-3 text-2xl font-bold border-l-4 border-[#00aaff] pl-4'>What we do</h2>
+        <h2 className='mb-3 text-2xl text-[#fe006e] font-bold border-l-4 border-[#fe006e] pl-4'>What we do</h2>
         <p className='mb-2'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae ipsa distinctio sit non vitae necessitatibus, totam odio fugiat saepe quia magnam! Reiciendis quam excepturi quod voluptatem rerum veritatis molestias facere!</p>
       </div>
     ),
@@ -53,7 +53,7 @@ const About = () => {
                   <button 
                     key={tab.id} 
                     className={`px-4 py-2 font-semibold
-                    ${activeTab === tab.id ? "border-b-2 border-[#00aaff] text-[#00aaff]" : "text-[#00679b] hover:text-[#00aaff7a]"}`}
+                    ${activeTab === tab.id ? "border-b-2 border-[#fe006e] text-[#fe006e]" : "text-[#fe006e7a] hover:text-[#fe006e]"}`}
                     onClick={() => setActiveTab(tab.id)}
                   >
                     {tab.label}

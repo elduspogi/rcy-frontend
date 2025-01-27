@@ -3,42 +3,10 @@ import PersonalInformation from '../forms/PersonalInformation';
 import { Address, Birthdate, Contact, InputHeader, InputLabel, MaabTable, MemberVolunteerRadios, PaymentDetails, Select } from '../forms/Input';
 import SubmitButton from '../forms/SubmitButton';
 
-const RegisterContent = ({ type }) => {
-  const [ selected, setSelected ] = useState(null);
-  const [ joinSelected, setJoinSelected ] = useState(null);
-  const [ phoneNumber, setPhoneNumber ] = useState("");
-
+const RegisterContent = () => {
   const age = [<option key="select-age" disabled={false}>Select Age</option>]
   for(let i = 15; i <= 30; ++i) {
     age.push(<option key={i}>{i}</option>);
-  }
-
-  const handleAddressSelected = (e) => {
-    setSelected(e.target.name);
-  }
-
-  useEffect(() => {
-    setJoinSelected(type === 'Member' ? 'radio-3' : 'radio-4');
-  }, [])
-
-  const handleJoinTypeSelected = (e) => {
-    setJoinSelected(e.target.name);
-  }
-
-  const barangays = [
-    {title: "Bagong Silang"}, {title: "Calendola"}, {title: "Chrysanthemum"}, {title: "Cuyab"}, {title: "Estrella"},
-    {title: "Fatima"}, {title: "G.S.I.S"}, {title: "Landayan"}, {title: "Langgam"}, {title: "Laram"},
-    {title: "Magsaysay"}, {title: "Maharlika"}, {title: "Narra"}, {title: "Nueva"}, {title: "Pacita 1"},
-    {title: "Pacita 2"}, {title: "Poblacion"}, {title: "Riverside"}, {title: "Rosario"}, {title: "Sampaguita"},
-    {title: "San Antonio"}, {title: "San Lorenzo Ruiz"}, {title: "San Roque"}, {title: "San Vicente"}, {title: "Santo Nino"},
-    {title: "United Bayanihan"}, {title: "United Better Living"}
-  ];
-
-
-  const handlePhoneNumberChange = (event) => {
-    const val = event.target.value.replace(/[^0-9]/g, "");
-
-    val.length > 11 ? event.preventDefault() : setPhoneNumber(val);
   }
 
   const gender = ["Male", "Female"];

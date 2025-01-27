@@ -12,7 +12,7 @@ const RegisterPage = () => {
       <MainLayout 
         children={
           <>
-            <HalfHero title="Join us" />
+            <HalfHero title={`Be a ${location.pathname === '/register/member' ? 'Member' : 'Volunteer'}!`} />
             <RegisterContent type={location.pathname === '/register/member' ? 'Member' : 'Volunteer'} />
           </>
         }

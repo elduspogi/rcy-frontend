@@ -23,8 +23,9 @@ const DonateBlood = () => {
               <h2 className="card-title mb-3 text-xl lg:text-3xl title font-bold">The Red Connection</h2>
               <p className='border-l-4 border-[#fe006e] px-2'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam animi ab itaque perferendis nesciunt illum iusto obcaecati earum pariatur consectetur! Commodi modi beatae officiis repellendus possimus placeat doloremque non aut?.</p>
             </div>
-            <div className="card-actions justify-center">
-              <Button text="Sign up" link="/register/donor" icon={<FaArrowRightLong />} />
+            <div className="card-actions justify-center gap-4">
+              <Button text="Be a donor" link="/register/donor" icon={<FaArrowRightLong />} />
+              <Button text="Request for donor" link="/request/donor" icon={<FaArrowRightLong />} />
             </div>
           </div>
         </div>

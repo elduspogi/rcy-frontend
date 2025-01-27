@@ -33,7 +33,7 @@ const RegisterDonorContent = () => {
         <InputHeader title="Qualifications for Blood Donor" />
         <div className='py-5'>
           {qualifications.map((q, index) => (
-            <p key={index} className="text-sm py-2">{index + 1}. {q.text} <strong className='text-[#00679b]'>{q.strong}</strong> {q.suffix}</p>
+            <p key={index} className="text-sm py-2">{index + 1}. {q.text} <strong className='text-[#fe006e]'>{q.strong}</strong> {q.suffix}</p>
           ))}
         </div>
 

@@ -4,19 +4,19 @@ import PersonalInformation from './PersonalInformation'
 
 export const InputHeader = ({ title }) => {
   return (
-    <h1 className='text-md lg:text-lg text-[#00679b]'>{title}</h1>
+    <h1 className='text-md lg:text-lg text-[#fe006e]'>{title}</h1>
   )
 }
 
 export const InputLabel = ({ id, text, isImportant }) => {
   return (
-    <label htmlFor={id} className='text-sm p-2 text-[#00679b]'>{text} {isImportant === true ? "*" : ""}</label>
+    <label htmlFor={id} className='text-sm p-2 text-[#fe006e]'>{text} {isImportant === true ? "*" : ""}</label>
   )
 }
 
 export const Select = ({ defaultValue, col, options }) => {
   return (
-    <select defaultValue={defaultValue} className={`select w-full md:col-span-${col} text-gray-400 text-md input-bordered focus:outline-none border-solid focus:border-2 focus:border-[#00aaff]`}>
+    <select defaultValue={defaultValue} className={`select w-full md:col-span-${col} text-gray-400 text-md input-bordered focus:outline-none border-solid focus:border-2 focus:border-[#fe006e]`}>
       { options }
     </select>
   )
@@ -28,7 +28,7 @@ export const Birthdate = ({ col }) => {
       <input 
         type="date" 
         placeholder="Birthdate" 
-        className="input input-bordered w-full rounded-md focus:outline-none border-solid focus:border-2 focus:border-[#00aaff] text-gray-400 text-sm" 
+        className="input input-bordered w-full rounded-md focus:outline-none border-solid focus:border-2 focus:border-[#fe006e] text-gray-400 text-sm" 
         name='username'
         autoComplete='false'
       />
@@ -66,20 +66,20 @@ export const Address = () => {
       </div>
 
       <div id="sanPedroCitizen" className={`${selected === 'radio-1' ? '': 'hidden'}`}>
-        <label htmlFor='lastName' className='text-sm p-2 text-[#00679b]'>Barangay *</label>
-        <select defaultValue="Select Barangay" className="select w-full mb-5 text-gray-400 text-md input-bordered focus:outline-none border-solid focus:border-2 focus:border-[#00aaff]">
+        <label htmlFor='lastName' className='text-sm p-2 text-[#fe006e]'>Barangay *</label>
+        <select defaultValue="Select Barangay" className="select w-full mb-5 text-gray-400 text-md input-bordered focus:outline-none border-solid focus:border-2 focus:border-[#fe006e]">
           <option disabled={false}>Select Barangay</option>
           {barangays.map((barangay, index) => (
             <option key={index}>{barangay.title}</option>
           ))}
         </select>
 
-        <label htmlFor='lastName' className='text-sm p-2 text-[#00679b]'>Street Address *</label>
+        <label htmlFor='lastName' className='text-sm p-2 text-[#fe006e]'>Street Address *</label>
         <div className="form-control md:col-span-2 pb-5">
             <input 
               type="text" 
               placeholder="Street Address" 
-              className="input input-bordered w-full rounded-md focus:outline-none border-solid focus:border-2 focus:border-[#00aaff] text-sm" 
+              className="input input-bordered w-full rounded-md focus:outline-none border-solid focus:border-2 focus:border-[#fe006e] text-sm" 
               name='username'
               autoComplete='false'
             />
@@ -89,12 +89,12 @@ export const Address = () => {
       <div id="otherCitizen" className={`${selected === 'radio-2' ? '': 'hidden'}`}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label htmlFor='lastName' className='text-sm p-2 text-[#00679b]'>City *</label>
+            <label htmlFor='lastName' className='text-sm p-2 text-[#fe006e]'>City *</label>
             <div className="form-control md:col-span-2">
               <input 
                 type="text" 
                 placeholder="City" 
-                className="input input-bordered w-full rounded-md focus:outline-none border-solid focus:border-2 focus:border-[#00aaff] text-sm" 
+                className="input input-bordered w-full rounded-md focus:outline-none border-solid focus:border-2 focus:border-[#fe006e] text-sm" 
                 name='username'
                 autoComplete='false'
               />
@@ -102,12 +102,12 @@ export const Address = () => {
           </div>
 
           <div>
-            <label htmlFor='lastName' className='text-sm p-2 text-[#00679b]'>Barangay *</label>
+            <label htmlFor='lastName' className='text-sm p-2 text-[#fe006e]'>Barangay *</label>
             <div className="form-control md:col-span-2">
               <input 
                 type="text" 
                 placeholder="Barangay" 
-                className="input input-bordered w-full rounded-md focus:outline-none border-solid focus:border-2 focus:border-[#00aaff] text-gray-400 text-sm" 
+                className="input input-bordered w-full rounded-md focus:outline-none border-solid focus:border-2 focus:border-[#fe006e] text-gray-400 text-sm" 
                 name='username'
                 autoComplete='false'
               />
@@ -116,11 +116,11 @@ export const Address = () => {
         </div>
 
         <div className="form-control md:col-span-2 py-5">
-        <label htmlFor='lastName' className='text-sm p-2 text-[#00679b]'>Street Address *</label>
+        <label htmlFor='lastName' className='text-sm p-2 text-[#fe006e]'>Street Address *</label>
           <input 
             type="text" 
             placeholder="Street Address" 
-            className="input input-bordered w-full rounded-md focus:outline-none border-solid focus:border-2 focus:border-[#00aaff] text-sm" 
+            className="input input-bordered w-full rounded-md focus:outline-none border-solid focus:border-2 focus:border-[#fe006e] text-sm" 
             name='username'
             autoComplete='false'
           />
@@ -134,11 +134,11 @@ export const Contact = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-4 gap-4 py-5 justify-center">
       <div className="form-control md:col-span-2">
-        <label htmlFor='lastName' className='text-sm p-2 text-[#00679b]'>Email Address *</label>
+        <label htmlFor='lastName' className='text-sm p-2 text-[#fe006e]'>Email Address *</label>
         <input 
           type="email" 
           placeholder="e.g. johnsmith@gmail.com" 
-          className="input input-bordered w-full rounded-md focus:outline-none border-solid focus:border-2 focus:border-[#00aaff] text-sm" 
+          className="input input-bordered w-full rounded-md focus:outline-none border-solid focus:border-2 focus:border-[#fe006e] text-sm" 
           name='username'
           autoComplete='false'
         />
@@ -150,11 +150,11 @@ export const Contact = () => {
       </div>
 
       <div className="form-control md:col-span-4">
-        <label htmlFor='lastName' className='text-sm p-2 text-[#00679b]'>Facebook Link *</label>
+        <label htmlFor='lastName' className='text-sm p-2 text-[#fe006e]'>Facebook Link *</label>
         <input 
           type="text" 
           placeholder="e.g. https://www.facebook.com/rcysanpedro" 
-          className="input input-bordered w-full rounded-md focus:outline-none border-solid focus:border-2 focus:border-[#00aaff] text-sm" 
+          className="input input-bordered w-full rounded-md focus:outline-none border-solid focus:border-2 focus:border-[#fe006e] text-sm" 
           name='username'
           autoComplete='false'
         />
@@ -177,7 +177,7 @@ export const ContactNumber = ({ length, placeholder }) => {
       <input 
         type="text" 
         placeholder={placeholder} 
-        className="input input-bordered w-full rounded-md focus:outline-none border-solid focus:border-2 focus:border-[#00aaff] text-sm" 
+        className="input input-bordered w-full rounded-md focus:outline-none border-solid focus:border-2 focus:border-[#fe006e] text-sm" 
         name='username'
         autoComplete='false'
         value={phoneNumber}
@@ -239,7 +239,7 @@ export const PaymentDetails = ({ gcashNumber, name, position }) => {
           <input 
             type="text" 
             placeholder="Reference Number" 
-            className="input input-bordered w-full rounded-md focus:outline-none border-solid focus:border-2 focus:border-[#00aaff] text-sm" 
+            className="input input-bordered w-full rounded-md focus:outline-none border-solid focus:border-2 focus:border-[#fe006e] text-sm" 
             name='reference_number'
             autoComplete='false'
             id='referenceNumber'
@@ -268,6 +268,10 @@ export const MemberVolunteerRadios = () => {
   const type = location.pathname === '/register/member' ? 'radio-3' : 'radio-4';
   const [ joinSelected, setJoinSelected ] = useState(type);
 
+  useEffect(() => {
+    setJoinSelected(type);
+  }, [type]);
+
   const handleJoinTypeSelected = (e) => {
     setJoinSelected(e.target.name);
   }
@@ -276,12 +280,12 @@ export const MemberVolunteerRadios = () => {
     <>
       <div className="flex flex-col gap-2 py-5 mb-4">
         <div className="flex content-center gap-2">
-          <input type="radio" name="radio-3" className="radio"  onChange={handleJoinTypeSelected} checked={joinSelected === "radio-3"} />
+          <input type="radio" name="radio-3" className="radio"   checked={joinSelected === "radio-3"} />
           <p className='text-sm'>Member</p>
         </div>
 
         <div className="flex content-center gap-2">
-          <input type="radio" name="radio-4" className="radio" onChange={handleJoinTypeSelected} checked={joinSelected === "radio-4"} />
+          <input type="radio" name="radio-4" className="radio"  checked={joinSelected === "radio-4"} />
           <p className='text-sm'>Volunteer</p>
         </div>
 
@@ -308,7 +312,7 @@ export const Questions = ({ question, radioNumber1, radioNumber2, radioText1, ra
 
   return (
     <div className="flex flex-col gap-2 mb-4">
-      <p className='text-sm text-[#00679b]'>{question} *</p>
+      <p className='text-sm text-[#fe006e]'>{question} *</p>
       <div className="flex content-center gap-2">
         <input type="radio" name={`radio-${radioNumber1}`} className="radio"  onChange={handleRadioChange} checked={showYes === `radio-${radioNumber1}`} />
         <p className='text-sm'>{radioText1}</p>
@@ -320,12 +324,12 @@ export const Questions = ({ question, radioNumber1, radioNumber2, radioText1, ra
       </div>
 
       {isFurtherQuestion && 
-        <div className={`${showYes === `radio-${radioNumber1}` ? "" : "hidden"}`}>
-          <p className="text-sm text-[#00679b]">Please specify *</p>
+        <div className={`${showYes === `radio-${radioNumber1}` ? "pb-5" : "hidden"}`}>
+          <p className="text-sm text-[#fe006e]">Please specify *</p>
           <input 
             type="text" 
             placeholder="Please specify" 
-            className="input input-bordered w-full rounded-md focus:outline-none border-solid focus:border-2 focus:border-[#00aaff] text-sm" 
+            className="input input-bordered w-full rounded-md focus:outline-none border-solid focus:border-2 focus:border-[#fe006e] text-sm" 
             name='username'
             autoComplete='false'
           />

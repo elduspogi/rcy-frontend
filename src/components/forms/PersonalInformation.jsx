@@ -9,7 +9,7 @@ const PersonalInformation = () => {
         <input 
           type="text" 
           placeholder="e.g. Juan" 
-          className="input input-bordered w-full rounded-md focus:outline-none border-solid focus:border-2 focus:border-[#00aaff] text-sm" 
+          className="input input-bordered w-full rounded-md focus:outline-none border-solid focus:border-2 focus:border-[#fe006e] text-sm" 
           name='first_name'
           autoComplete='false'
           id='firstName'
@@ -21,7 +21,7 @@ const PersonalInformation = () => {
         <input 
           type="text" 
           placeholder="e.g. Dela Cruz" 
-          className="input input-bordered w-full rounded-md focus:outline-none border-solid focus:border-2 focus:border-[#00aaff] text-sm" 
+          className="input input-bordered w-full rounded-md focus:outline-none border-solid focus:border-2 focus:border-[#fe006e] text-sm" 
           name='last_name'
           autoComplete='false'
           id='lastName'
@@ -33,7 +33,7 @@ const PersonalInformation = () => {
         <input 
           type="text" 
           placeholder="e.g. Antonio" 
-          className="input input-bordered w-full rounded-md focus:outline-none border-solid focus:border-2 focus:border-[#00aaff] text-sm" 
+          className="input input-bordered w-full rounded-md focus:outline-none border-solid focus:border-2 focus:border-[#fe006e] text-sm" 
           name='middle_name'
           autoComplete='false'
           id='middleName'

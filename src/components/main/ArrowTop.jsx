@@ -9,7 +9,7 @@ const ArrowTop = () => {
   return (
     <button
       onClick={handleGoToTop}
-      className={`fixed bottom-3 right-3 p-3 bg-[#00aaff] hover:bg-[#00679b] dark:bg-[#00679b] hover:dark:bg-[#00aaff]  text-white rounded-full shadow-xl transition-all ease-in-out duration-1000 ${
+      className={`fixed bottom-3 right-3 p-3 bg-[#fe006e] hover:bg-[#fe006e7a] text-white rounded-full shadow-xl transition-all ease-in-out duration-1000 ${
         isVisible ? 'opacity-100' : 'opacity-0'
       }`}
       style={{ transition: 'opacity 0.3s ease' }}
