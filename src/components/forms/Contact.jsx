@@ -18,7 +18,7 @@ const Contact = ({ register }) => {
 
       <div className="form-control md:col-span-2">
         <InputLabel id='contactNumber' text='Contact Number' isImportant={true} />
-        <ContactNumber register={register} length={11} placeholder='e.g. 09123456789' />
+        <ContactNumber register={register} name='contact_number' length={11} placeholder='e.g. 09123456789' />
       </div>
 
       <div className="form-control md:col-span-4">

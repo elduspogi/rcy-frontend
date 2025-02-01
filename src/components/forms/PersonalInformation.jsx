@@ -1,12 +1,11 @@
 import React from 'react'
 import { InputLabel } from './Input'
 
-const PersonalInformation = ({ register, errors }) => {
+const PersonalInformation = ({ register }) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-5 py-3 gap-4">
       <div className="form-control md:col-span-2">
         <InputLabel id='firstName' text='First Name' isImportant={true} />
-        {errors.firstName && <span className='text-sm text-red-500'>{errors.firstName}</span>}
         <input 
           type="text" 
           placeholder="e.g. Juan" 

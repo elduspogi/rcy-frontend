@@ -18,6 +18,10 @@ const Address = ({ register, setValue }) => {
     setValue('barangay', e.target.value);
   }
 
+  const handleStreetAddressChange = (e) => {
+    setValue('street_address', e.target.value);
+  }
+
   const barangays = [
     {title: "Bagong Silang"}, {title: "Calendola"}, {title: "Chrysanthemum"}, {title: "Cuyab"}, {title: "Estrella"},
     {title: "Fatima"}, {title: "G.S.I.S"}, {title: "Landayan"}, {title: "Langgam"}, {title: "Laram"},
@@ -100,7 +104,7 @@ const Address = ({ register, setValue }) => {
                 placeholder="Barangay" 
                 className="input input-bordered w-full rounded-md focus:outline-none border-solid focus:border-2 focus:border-[#fe006e] text-gray-400 text-sm" 
                 autoComplete='false'
-                {...register('barangay')}
+                onChange={handleStreetAddressChange}
               />
             </div>
           </div>
@@ -113,7 +117,7 @@ const Address = ({ register, setValue }) => {
             placeholder="Street Address" 
             className="input input-bordered w-full rounded-md focus:outline-none border-solid focus:border-2 focus:border-[#fe006e] text-sm" 
             autoComplete='false'
-            {...register('street_address')}
+            onChange={handleStreetAddressChange}
           />
         </div>
       </div>

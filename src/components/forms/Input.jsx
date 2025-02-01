@@ -41,9 +41,8 @@ export const Birthdate = ({ register }) => {
   )
 };
 
-export const ContactNumber = ({ length, placeholder, register }) => {
+export const ContactNumber = ({ length, placeholder, register, name }) => {
   const [ phoneNumber, setPhoneNumber ] = useState("");
-
   const handlePhoneNumberChange = (event) => {
     const val = event.target.value.replace(/[^0-9]/g, "");
 
@@ -60,7 +59,7 @@ export const ContactNumber = ({ length, placeholder, register }) => {
         value={phoneNumber}
         onChange={handlePhoneNumberChange}
         id='contactNumber'
-        {...register('contact_number')}
+        {...register(name)}
       />
     </>
  )
@@ -152,20 +151,20 @@ export const Questions = ({ question, radioNumber1, radioNumber2, radioText1, ra
   )
 }
 
-export const EmergencyContact = () => {
+export const EmergencyContact = ({ register }) => {
   return (
     <>
-      <PersonalInformation />
+      <PersonalInformation register={register} />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
           <InputLabel id='emergencyContactNumber' text='Contact Number' isImportant={true} />
-          <ContactNumber length={11} placeholder='e.g. 09123456789' />
+          <ContactNumber register={register} name='emergency_contact_number' length={11} placeholder='e.g. 09123456789' />
         </div>
 
         <div>
           <InputLabel id='emergencyRelationship' text='Relationship' isImportant={true} />
-          <ContactNumber length={11} placeholder='e.g. 09123456789' />
+          <ContactNumber register={register} name='emergency_contact_number' length={11} placeholder='e.g. 09123456789' />
         </div>
       </div>
     </>

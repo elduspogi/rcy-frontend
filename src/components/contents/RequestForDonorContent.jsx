@@ -3,6 +3,7 @@ import { InputHeader, InputLabel, Select } from '../forms/Input'
 import PersonalInformation from '../forms/PersonalInformation'
 import SubmitButton from '../forms/SubmitButton';
 import Contact from '../forms/Contact'
+import { useForm } from 'react-hook-form';
 
 const RequestForDonorContent = () => {
   const bloodType = ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-", "I do not know"];
@@ -12,11 +13,13 @@ const RequestForDonorContent = () => {
     types.push(<option key={i + 1}>{bloodType[i]}</option>);
   }
 
+  const { register, handleSubmit } = useForm();
+
   return (
     <div className='mx-2 lg:mx-40 component'>
       <div className="pb-5">
         <InputHeader title="Requester Details" />
-        <PersonalInformation />
+        <PersonalInformation register={register} />
       </div>
 
       <div className="pb-5">
@@ -26,13 +29,13 @@ const RequestForDonorContent = () => {
 
         <InputLabel id='bloodType' text="Select Blood Type" isImportant={true} />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <Select id='bloodType' col={1} options={types} />
+          <Select defaultValue='Select Blood Type' col={1} options={types} register={register} name='blood_type' />
         </div>
       </div>
 
       <div className="py-5">
         <InputHeader title="Contact Details" />
-        <Contact />
+        <Contact register={register} />
       </div>
 
       <SubmitButton />
