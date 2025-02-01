@@ -5,13 +5,7 @@ import MainLayout from '../../layout/MainLayout'
 const PartnerRegister = () => {
   return (
     <>
-    <MainLayout 
-      children={
-        <>
-          <HalfHero title="Partner with us" />
-        </>
-      }
-    />
+      <HalfHero title="Partner with us" />
     </>
   )
 }

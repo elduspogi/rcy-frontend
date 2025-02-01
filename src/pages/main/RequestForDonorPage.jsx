@@ -5,13 +5,10 @@ import RequestForDonorContent from '../../components/contents/RequestForDonorCon
 
 const RequestForDonorPage = () => {
   return (
-    <MainLayout 
-      children={
-      <>
-        <HalfHero title={'Request for Donor'} />
-        <RequestForDonorContent />
-      </>} 
-    />
+    <>
+      <HalfHero title={'Request for Donor'} />
+      <RequestForDonorContent />
+    </>
   )
 }
 

@@ -1,7 +1,8 @@
 import React from 'react'
-import { Contact, InputHeader, InputLabel, Select } from '../forms/Input'
+import { InputHeader, InputLabel, Select } from '../forms/Input'
 import PersonalInformation from '../forms/PersonalInformation'
 import SubmitButton from '../forms/SubmitButton';
+import Contact from '../forms/Contact'
 
 const RequestForDonorContent = () => {
   const bloodType = ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-", "I do not know"];

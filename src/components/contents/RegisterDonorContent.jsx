@@ -1,8 +1,9 @@
 import React from 'react'
 import PersonalInformation from '../forms/PersonalInformation'
-import { Address, Birthdate, Contact, ContactNumber, EmergencyContact, InputHeader, InputLabel, Questions, Select } from '../forms/Input'
+import { Birthdate, ContactNumber, EmergencyContact, InputHeader, InputLabel, Questions, Select } from '../forms/Input'
 import SubmitButton from '../forms/SubmitButton';
-
+import Address from '../forms/Address'
+import Contact from '../forms/Contact'
 const RegisterDonorContent = () => {
   const bloodType = ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-", "I do not know"];
   const types = [<option key="Select Blood Type" disabled={false}>Select Blood Type</option>];

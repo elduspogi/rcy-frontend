@@ -53,7 +53,7 @@ const OfficersContent = () => {
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-4'>
         {officers.map((officer, index) => (
           <div className='flex flex-col xl:flex-row items-center md:p-5 gap-4' key={index}>
-            <img src={officer.src} alt={`${officer.position} Image`} className='w-[150px] h-[150px] lg:w-[200px] lg:h-[200px] border-4 border-[#00aaff] dark:border-[#fe006e] rounded-full' />
+            <img src={officer.src} alt={`${officer.position} Image`} className='w-[150px] h-[150px] lg:w-[200px] lg:h-[200px] border-4 border-[#fe006e] rounded-full' />
 
             <div className='text-center xl:text-left'>
               <h1 className='font-bold text-2xl xl:text-3xl title'>{officer.name}</h1>
@@ -68,7 +68,7 @@ const OfficersContent = () => {
       <div className='grid grid-cols-1 md:grid-cols-3 gap-4 component'>
         {representatives.map((representative, index) => (
           <div className='flex flex-col xl:flex-row items-center md:p-5 gap-4' key={index}>
-            <img src={representative.src} alt={`${representative.position} Image`} className='w-[150px] lg:h-[150px] border-4 border-[#00aaff] dark:border-[#fe006e] rounded-full object-cover' />
+            <img src={representative.src} alt={`${representative.position} Image`} className='w-[150px] lg:h-[150px] border-4 border-[#fe006e] rounded-full object-cover' />
 
             <div className='text-center xl:text-left'>
             <h1 className='font-bold text-2xl xl:text-xl title'>{representative.name}</h1>

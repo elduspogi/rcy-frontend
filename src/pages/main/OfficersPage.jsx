@@ -6,14 +6,8 @@ import MainLayout from '../../layout/MainLayout'
 const OfficersPage = () => {
   return (
     <>
-      <MainLayout 
-        children={
-          <>
-            <HalfHero title="Officers" />
-            <OfficersContent />
-          </>
-        }
-      />
+      <HalfHero title="Officers" />
+      <OfficersContent />
     </>
   )
 }

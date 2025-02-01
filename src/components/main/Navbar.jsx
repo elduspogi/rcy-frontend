@@ -12,7 +12,7 @@ const Navbar = () => {
 
   return (
     <div className={`navbar p-0 lg:px-4 fixed bg-transparent z-50 transition-all duration-300 ease-in-out ${
-      isBackground ? 'bg-white dark:bg-slate-800 navbar-shadow' : 'bg-transparent'
+      isBackground ? 'bg-white dark:bg-[#1d232a] navbar-shadow' : 'bg-transparent'
     }`} id='navbar'>
       <div className="navbar-start">
         <div className="dropdown">
@@ -57,7 +57,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-end hidden lg:flex">
         <label className="swap swap-rotate text-2xl rounded-full p-2 bg-slate-200 dark:bg-gray-700 hover:cursor-pointer hover:bg-slate-300 hover:dark:bg-slate-300 hover:dark:text-gray-800">
-          <input type="checkbox" className="theme-controller" value="synthwave" checked={theme === 'light' ? true : false } onChange={toggleTheme} />
+          <input id='themeToggler' type="checkbox" className="theme-controller" value="synthwave" checked={theme === 'light' ? true : false } onChange={toggleTheme} />
 
           <CiLight className='swap-off' />
           <CiDark className='swap-on' />

@@ -10,19 +10,13 @@ import MainLayout from '../../layout/MainLayout'
 const LandingPage = () => {
   return (
     <>
-      <MainLayout 
-        children={
-          <>
-            <Hero />
-            <About />
-            <Officers />
-            <Volunteer />
-            <DonateBlood />
-            <Partners />
-            <Faqs />
-          </>
-        }
-      />
+      <Hero />
+      <About />
+      <Officers />
+      <Volunteer />
+      <DonateBlood />
+      <Partners />
+      <Faqs />
     </>
   )
 }

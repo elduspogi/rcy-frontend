@@ -4,7 +4,9 @@ import Error404Content from '../../components/contents/Error404Content'
 
 const Error404 = () => {
   return (
-    <MainLayout children={<Error404Content />} />
+    <>
+      <Error404Content />
+    </>
   )
 }
 

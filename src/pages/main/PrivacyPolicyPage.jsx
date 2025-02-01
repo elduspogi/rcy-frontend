@@ -6,14 +6,8 @@ import MainLayout from '../../layout/MainLayout'
 const PrivacyPolicyPage = () => {
   return (
     <>
-      <MainLayout 
-        children={
-          <>
-            <HalfHero title="Privacy Policy" />
-            <PrivacyPolicyContent />
-          </>
-        }
-      />
+      <HalfHero title="Privacy Policy" />
+      <PrivacyPolicyContent />
     </>
   )
 }

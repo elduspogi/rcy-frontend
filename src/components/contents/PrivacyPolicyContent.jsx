@@ -16,12 +16,12 @@ const PrivacyPolicyContent = () => {
   return (
     <div className='mx-2 lg:mx-40 component'>
       <div className="px-10">
-      <p className='pb-5 text-sm'>Last Updated At: <span className="text-[#00679b]">{lastUpdatedAt}</span></p>
+      <p className='pb-5 text-sm'>Last Updated At: <span className="text-[#fe006e]">{lastUpdatedAt}</span></p>
         <p className='pb-5'>Welcome to the City of San Pedro Red Cross Youth. We are committed to protecting your privacy and ensuring that your personal information is handled in a safe and responsible manner.</p>
         {contents.map((content, index) => (
           <div key={index}>
             <InputHeader title={content.title} />
-            <p className='py-5'>{content.text} {content.contact && <a href={`mailto:${content.contact}`} className='text-[#00679b]'>{content.contact}</a>}</p>
+            <p className='py-5'>{content.text} {content.contact && <a href={`mailto:${content.contact}`} className='text-[#fe006e]'>{content.contact}</a>}</p>
           </div>
         ))}
       </div>

@@ -6,14 +6,8 @@ import RegisterDonorContent from '../../components/contents/RegisterDonorContent
 const DonorRegister = () => {
   return (
     <>
-      <MainLayout 
-        children={
-          <>
-            <HalfHero title="Be a donor" />
-            <RegisterDonorContent />
-          </>
-        }
-      />
+      <HalfHero title="Be a donor" />
+      <RegisterDonorContent />
     </>
   )
 }
