@@ -14,11 +14,11 @@ export const InputLabel = ({ id, text, isImportant }) => {
   )
 }
 
-export const Select = ({ defaultValue, col, options, register, name }) => {
+export const Select = ({ defaultValue, col, options, register, name, error }) => {
   return (
     <select
      defaultValue={defaultValue} 
-     className={`select w-full md:col-span-${col} text-gray-400 text-md input-bordered focus:outline-none border-solid focus:border-2 focus:border-[#fe006e]`}
+     className={`select w-full md:col-span-${col} text-gray-400 text-md input-bordered focus:outline-none border-solid focus:border-2 focus:border-[#fe006e] ${error ? 'border-2 border-red-500 focus:border-red-500' : ''}`}
      {...register(name)}
     >
       { options }
@@ -41,26 +41,24 @@ export const Birthdate = ({ register }) => {
   )
 };
 
-export const ContactNumber = ({ length, placeholder, register, name }) => {
-  const [ phoneNumber, setPhoneNumber ] = useState("");
+export const ContactNumber = ({  placeholder, register, name, error }) => {
   const handlePhoneNumberChange = (event) => {
     const val = event.target.value.replace(/[^0-9]/g, "");
-
-    val.length > length ? event.preventDefault() : setPhoneNumber(val);
   }
 
   return (
     <>
       <input 
+        {...register(name)}
         type="text" 
         placeholder={placeholder} 
-        className="input input-bordered w-full rounded-md focus:outline-none border-solid focus:border-2 focus:border-[#fe006e] text-sm"
+        className={`input input-bordered w-full rounded-md focus:outline-none border-solid focus:border-2 focus:border-[#fe006e] text-sm ${error ? 'border-2 border-red-500 focus:border-red-500' : ''}`}
         autoComplete='false'
-        value={phoneNumber}
+        // value={phoneNumber}
         onChange={handlePhoneNumberChange}
         id='contactNumber'
-        {...register(name)}
       />
+      {error && <span className='text-sm text-red-500'>{error}</span>}
     </>
  )
 }

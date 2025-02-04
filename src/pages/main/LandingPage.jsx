@@ -5,7 +5,6 @@ import Volunteer from '../../components/main/Volunteer'
 import DonateBlood from '../../components/main/DonateBlood'
 import Faqs from '../../components/main/Faqs'
 import Partners from '../../components/main/Partners'
-import MainLayout from '../../layout/MainLayout'
 
 const LandingPage = () => {
   return (

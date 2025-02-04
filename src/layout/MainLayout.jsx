@@ -10,7 +10,7 @@ const MainLayout = () => {
   const { user, token } = useStateContext();
 
   if(token) {
-    return <Navigate to='/admin' />
+    return <Navigate to={'/admin'} />
   } 
 
   return (

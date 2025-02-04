@@ -10,6 +10,8 @@ import RequestForDonorPage from "../pages/main/RequestForDonorPage";
 import Login from "../pages/auth/Login";
 import Error404 from "../pages/error/Error404";
 import MainLayout from "../layout/MainLayout";
+import AdminLayout from "../layout/AdminLayout";
+import Dashboard from "../pages/admin/Dashboard";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +27,13 @@ const router = createBrowserRouter([
       { path: "/register/donor", element: <><DonorRegister /><Title /></> },
       { path: "/request/donor", element: <><RequestForDonorPage /><Title /></> },  
       { path: "/*", element: <><Error404 /><Title /></> },
+    ]
+  },
+  {
+    path: "/",
+    element: <AdminLayout />,
+    children: [
+      { path: "/admin", element: <><Dashboard /><Title /></>},
     ]
   },
   { path: "/login", element: <><Login /><Title /></> },

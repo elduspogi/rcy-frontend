@@ -1,14 +1,22 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Address = ({ register, setValue }) => {
-  const [ selected, setSelected ] = useState(null);
+  const [ selected, setSelected ] = useState('radio-1');
   const [ streetAddress, setStreetAddress ] = useState(null);
+
+  const checkCity = (selected) => {
+    return selected === 'radio-1' ? setValue('city', 'San Pedro City') : null;
+  }
+
+  useEffect(() => {
+    checkCity(selected);
+  }, [])
 
   const handleAddressSelected = (e) => {
     setSelected(e.target.name);
     // cityRef.current.value = e.target.name === 'radio-1' ? 'San Pedro City' : null;
 
-    selected === 'radio-1' ? setValue('city', 'San Pedro City') : null;
+    checkCity(selected);
   }
 
   const handleBarangayChange = (e) => {
